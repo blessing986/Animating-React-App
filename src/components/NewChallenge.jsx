@@ -61,14 +61,14 @@ export default function NewChallenge({ onDone }) {
           id="new-challenge-images"
           variants={{
             // staggerChildren controls the delay by which the child element(li element) will start their animation
-            visible: { transition: { staggerChildren: 0.05 } }, 
+            visible: { transition: { staggerChildren: 0.05 } },
           }}
         >
           {images.map((image) => (
             <motion.li
               variants={{
                 hidden: { opacity: 0, scale: 0.5 },
-                visible: { opacity: 1, scale: 1 },
+                visible: { opacity: 1, scale: [0.8, 1.3, 1] },
               }}
               exit={{ opacity: 1, scale: 1 }}
               transition={{ type: "spring" }}
